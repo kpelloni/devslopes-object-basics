@@ -16,12 +16,12 @@ laBellaVita.address = "123 Northpark Ave";
 laBellaVita.zipcode = 80915;
 laBellaVita.acceptsReservations = true;
 
-laBellaVita.numberOfStars = 5;
-laBellaVita.favorited = false;
+laBellaVita.numberOfStars += 5;
+laBellaVita.favorited = !laBellaVita.favorited;
 laBellaVita.cuisines.push("French");
 
 function retrieveProperty(obj, key) {
-    if (Object.prototype.hasOwnProperty.call(obj, key)) {
+    if (Object.hasOwnProperty.call(obj, key)) {
         return obj[key];
     }
     return "The information you requested does not exist.";
